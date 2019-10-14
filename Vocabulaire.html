@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="Vocabulaire.js"></script>
+    </head>
+
+    <body>
+        
+        <h1>Vocabulaire</h1>
+
+        <button onclick="OnPlay()">Dire le mot</button>
+
+        <h2>Écris le mot que tu entends:</h2>
+        <input id="resultInput"> </input>
+
+        <button onclick="OnCheck()">Verifier!</button>
+        
+        <br><br>
+        <div id="result">
+            <h3 id="stats">Résultat</h3>
+            <div>
+                Nombre de succès: <b><span id="nbSuccess"></span></b>
+            </div>
+            <div>
+                Nombre d'erreurs: <b><span id="nbErrors"></span></b>
+            </div>
+            <div>
+                Nombre de succès consécutifs: <b><span id="nbConsecutiveSuccess"></span></b>
+            </div>
+        </div>
+    </body>
+</html>
