@@ -14,16 +14,16 @@
             <h1>Vocabulaire</h1>
 
             <div class="pb-4">
-                <button onclick="OnPlay()">Dire le mot</button>
+                <button type="button" class="btn btn-success" onclick="OnPlay()">Dire le mot</button>
             </div>
 
             <div class="pb-4">
                 <h2>Écris le mot que tu entends:</h2>
-                <input id="resultInput"> </input>
+                <input id="resultInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></input>
             </div>
 
             <div class="pb-4">
-                <button onclick="OnCheck()">Vérifier!</button>
+                <button id="checkButton" type="button" class="btn btn-primary" onclick="OnCheck()"><b>Vérifier!</b></button>
             </div>
             
             <div id="result">

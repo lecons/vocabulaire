@@ -10,6 +10,10 @@ $(document).ready(function() {
     $("#resultInput").focus();
     $("body").css("background-color", "lightyellow");
     $("#result").css("background-color", "white");
+
+    $('#resultInput').keypress(function(e) {
+            if (e.keyCode == 13) $('#checkButton').click();
+        });
 });
 
 
@@ -60,7 +64,7 @@ function OnCheck()
 {
     window.speechSynthesis.cancel();
 
-    if ($("#resultInput").val() == g_wordList[g_currentWord])
+    if ($("#resultInput").val().trim().toLocaleLowerCase() == g_wordList[g_currentWord].toLocaleLowerCase())
     {
         Say("BRAVO!!").onend = function() {
             alert("BRAVO !");
